@@ -29,20 +29,22 @@ public class CollectionTestSuite {
     @Test
     public void testOddNumbersExterminatorNormalList(){
         OddNumbersExterminator oddExterminator = new OddNumbersExterminator();
-        int  intToStart = -400;
-        int  intToEnd = 140;
 
         ArrayList<Integer> listToCheck = new ArrayList<Integer>();
-        for (int i = intToStart; i <= intToEnd; i++) {
-            listToCheck.add(i);
-        }
+        listToCheck.add(-20);
+        listToCheck.add(-2);
+        listToCheck.add(3);
+        listToCheck.add(4);
+        listToCheck.add(7);
+        listToCheck.add(8);
+        listToCheck.add(15);
+        listToCheck.add(16);
+        listToCheck.add(19);
+
         ArrayList<Integer> testResult = oddExterminator.exterminate(listToCheck);
 
         ArrayList<Integer> expectedResult = new ArrayList<Integer>();
-        for (int i = intToStart; i <= intToEnd; i++) {
-            if(i % 2 == 0)
-            expectedResult.add(i);
-        }
+        Collections.addAll(expectedResult,-20, -2, 4, 8, 16);
 
         System.out.println("Testing testOddNumbersExterminatorNormalList()");
         Assert.assertEquals(expectedResult, testResult);
