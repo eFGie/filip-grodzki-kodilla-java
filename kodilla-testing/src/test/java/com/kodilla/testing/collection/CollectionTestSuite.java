@@ -29,17 +29,17 @@ public class CollectionTestSuite {
     @Test
     public void testOddNumbersExterminatorNormalList(){
         OddNumbersExterminator oddExterminator = new OddNumbersExterminator();
-        Integer  intToStart = -400;
-        Integer  intToEnd = 140;
+        int  intToStart = -400;
+        int  intToEnd = 140;
 
         ArrayList<Integer> listToCheck = new ArrayList<Integer>();
-        for (Integer i = intToStart; i <= intToEnd; i++) {
+        for (int i = intToStart; i <= intToEnd; i++) {
             listToCheck.add(i);
         }
         ArrayList<Integer> testResult = oddExterminator.exterminate(listToCheck);
 
         ArrayList<Integer> expectedResult = new ArrayList<Integer>();
-        for (Integer i = intToStart; i <= intToEnd; i++) {
+        for (int i = intToStart; i <= intToEnd; i++) {
             if(i % 2 == 0)
             expectedResult.add(i);
         }
